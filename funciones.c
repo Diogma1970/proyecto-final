@@ -4,11 +4,11 @@
 #include "funciones.h"
 
 void cargarDatos(Zona *zonas) {
-    float temp = 25 + rand() % 10;
-    float viento = 1 + rand() % 5;
-    float humedad = 50 + rand() % 50;
     for (int i = 0; i < ZONAS; i++) {
         sprintf((zonas + i)->nombre, "Zona %d", i + 1);
+        float temp = 25 + rand() % 10;
+        float viento = 1 + rand() % 5;
+        float humedad = 50 + rand() % 50;
         for (int j = 0; j < DIAS_HISTORICOS; j++) {
             // Aumentar la probabilidad de exceder el limite
             float r = (float)rand() / RAND_MAX;
